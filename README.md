@@ -2,6 +2,8 @@
 Python Snake game based on the tutorial by baraltech found here:
 https://www.youtube.com/watch?v=ebVV-6QMUIU
 
+!(Gameplay Python Snake)[https://github.com/nconde25/python-snake-game/blob/main/screenshots/gameplay.png]
+
 With several changes including:
 
 ## CORE CHANGES
