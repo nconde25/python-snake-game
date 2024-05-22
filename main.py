@@ -4,12 +4,12 @@ import random
 
 pygame.init()
 
-SW, SH = 800, 800
-
+SW, SH = 600, 600
+SPEED = 6
 BLOCK_SIZE = 50
-FONT = pygame.font.Font("font.ttf", BLOCK_SIZE * 2)
+FONT = pygame.font.Font("font.ttf", BLOCK_SIZE)
 
-screen = pygame.display.set_mode((800,800))
+screen = pygame.display.set_mode((SW,SH+50))
 pygame.display.set_caption("Snake!")
 clock = pygame.time.Clock()
 
@@ -63,7 +63,7 @@ def drawGrid():
             pygame.draw.rect(screen, "#3c3c3B", rect, 1)
 
 score = FONT.render("1", True, "white")
-score_rect = score.get_rect(center=(SW/2, SH/20))
+score_rect = score.get_rect(center=(SW/20, SH+25))
 
 drawGrid()
 
@@ -97,7 +97,7 @@ while True:
 
     apple.update()
 
-    score = FONT.render(f"{len(snake.body) + 1}", True, "white")
+    score = FONT.render(f"score: {len(snake.body) + 1}", True, "white")
     
     pygame.draw.rect(screen, "green", snake.head)
     
@@ -111,4 +111,4 @@ while True:
         apple = Apple()
 
     pygame.display.update()
-    clock.tick(10)
+    clock.tick(SPEED)
