@@ -160,7 +160,7 @@ while True:
         score_rect = score_text.get_rect(center=(SW / 2, SH / 2))
         screen.blit(score_text, score_rect)
 
-        retry_text = FONT.render("Retry? YES / NO", True, "white")
+        retry_text = FONT.render("Retry?", True, "white")
         retry_rect = retry_text.get_rect(center=(SW / 2, SH / 2 + 50))
         screen.blit(retry_text, retry_rect)
 
