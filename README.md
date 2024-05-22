@@ -7,7 +7,6 @@ With several changes including:
 ## CORE CHANGES
 - Removed dependency of font file.
 - Avoid the need for resetting the screen and redrawing the grid each frame, Modify the Snake.update method to correctly move the snake by adding a new head and removing the last segment.
-- 
 
 ## BUGFIXES
 - The snake's direction cannot reverse directly to avoid self-collision by instantaneous 180-degree turns.
